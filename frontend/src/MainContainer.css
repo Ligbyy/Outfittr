@@ -1,0 +1,299 @@
+:root {
+  --input-focus-border: #00e5ff;
+  --wall-grid: rgba(255, 255, 255, 0.06);
+  --spray-pink: #ff4fa3;
+  --spray-orange: #ff8a00;
+  --spray-blue: #00e5ff;
+  --paper: #fff6dd;
+}
+
+p {
+  cursor: default;
+}
+
+.headerText {
+  font-size: 1.8em !important;
+}
+
+.graffitiBar {
+  background: rgba(10, 10, 10, 0.88) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35) !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.graffitiToolbar {
+  min-height: 80px !important;
+}
+
+.brandStack {
+  display: flex;
+  flex-direction: column;
+}
+
+.graffitiWordmark {
+  font-family: 'Permanent Marker', 'Impact', sans-serif !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 var(--spray-pink), 6px 6px 0 rgba(0, 229, 255, 0.3);
+}
+
+.graffitiTagline {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.subPanelContainer {
+  width: 100%;
+  margin-top: 64px;
+  height: calc(100% - 64px);
+  overflow-y: auto;
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(255, 79, 163, 0.12), transparent 35%),
+    linear-gradient(225deg, rgba(0, 229, 255, 0.15), transparent 30%),
+    repeating-linear-gradient(
+      90deg,
+      var(--wall-grid) 0,
+      var(--wall-grid) 1px,
+      transparent 1px,
+      transparent 52px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--wall-grid) 0,
+      var(--wall-grid) 1px,
+      transparent 1px,
+      transparent 52px
+    ),
+    linear-gradient(180deg, #242424 0%, #111111 100%);
+}
+
+.cityGlow {
+  position: fixed;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cityGlowLeft {
+  top: 90px;
+  left: -100px;
+  background: rgba(255, 79, 163, 0.35);
+}
+
+.cityGlowRight {
+  bottom: 40px;
+  right: -120px;
+  background: rgba(0, 229, 255, 0.35);
+}
+
+.paintDrip {
+  position: fixed;
+  top: 64px;
+  width: 16px;
+  border-radius: 0 0 18px 18px;
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.paintDripOne {
+  left: 16%;
+  height: 120px;
+  background: linear-gradient(180deg, var(--spray-orange), rgba(255, 138, 0, 0));
+}
+
+.paintDripTwo {
+  right: 19%;
+  height: 90px;
+  background: linear-gradient(180deg, var(--spray-blue), rgba(0, 229, 255, 0));
+}
+
+.authShell {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1rem;
+}
+
+.authCard {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.03)),
+    linear-gradient(135deg, rgba(255, 79, 163, 0.08), rgba(0, 229, 255, 0.04)),
+    rgba(17, 17, 17, 0.94) !important;
+  color: var(--paper) !important;
+  border: 3px solid rgba(255, 246, 221, 0.18);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.46);
+}
+
+.authCard::after {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(255, 246, 221, 0.15);
+  pointer-events: none;
+}
+
+.authCardLogin {
+  width: 430px;
+  max-width: 92vw;
+  min-height: 520px;
+  transform: rotate(-1deg);
+}
+
+.authCardRegister {
+  width: 100%;
+  min-height: 780px;
+}
+
+.authCardHome {
+  transform: rotate(1deg);
+}
+
+.sprayAccent {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(36px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.sprayAccentPink {
+  top: -20px;
+  right: -10px;
+  width: 140px;
+  height: 140px;
+  background: rgba(255, 79, 163, 0.45);
+}
+
+.sprayAccentBlue {
+  bottom: 40px;
+  left: -10px;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 229, 255, 0.25);
+}
+
+.sprayAccentOrange {
+  top: 30px;
+  right: 60px;
+  width: 130px;
+  height: 130px;
+  background: rgba(255, 138, 0, 0.3);
+}
+
+.authEyebrow {
+  position: relative;
+  z-index: 1;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--spray-blue);
+}
+
+.authTitle {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-top: 0.3rem;
+  margin-bottom: 0.35rem;
+  cursor: default;
+  font-family: 'Permanent Marker', 'Impact', sans-serif;
+  color: var(--paper);
+}
+
+.authTitleLogin,
+.authTitleRegister,
+.authTitleHome {
+  font-size: 3.5rem;
+  letter-spacing: 0.04em;
+  text-shadow: 3px 3px 0 rgba(255, 79, 163, 0.85), 6px 6px 0 rgba(0, 229, 255, 0.22);
+}
+
+.authSubtitle {
+  position: relative;
+  z-index: 1;
+  max-width: 34rem;
+  margin-bottom: 1rem !important;
+  color: rgba(255, 246, 221, 0.82) !important;
+}
+
+.authActions {
+  padding: 0 16px 20px 16px !important;
+}
+
+.authButtonRow {
+  width: 100%;
+}
+
+.authButton {
+  width: 100%;
+  min-height: 52px;
+  font-family: 'Permanent Marker', 'Impact', sans-serif !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  border: 2px solid var(--paper) !important;
+}
+
+.authButtonPrimary {
+  background: linear-gradient(90deg, var(--spray-orange), var(--spray-pink)) !important;
+  color: #0f0f0f !important;
+}
+
+.authButtonGhost {
+  background: transparent !important;
+  color: var(--paper) !important;
+}
+
+.backButton {
+  background: rgba(255, 246, 221, 0.08) !important;
+  color: var(--spray-blue) !important;
+  border: 2px solid rgba(255, 246, 221, 0.22) !important;
+}
+
+.authStatus {
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+}
+
+.authStatusError {
+  color: #ff7f7f !important;
+}
+
+.authStatusSuccess {
+  color: #7fffd4 !important;
+}
+
+@media only screen and (max-width: 599px) {
+  .subPanelContainerSmall {
+    margin-top: 48px !important;
+    height: calc(100% - 48px)!important;
+  }
+
+  .graffitiToolbar {
+    min-height: 64px !important;
+  }
+
+  .authTitleLogin,
+  .authTitleRegister,
+  .authTitleHome {
+    font-size: 2.6rem;
+  }
+
+  .authCardLogin {
+    min-height: 540px;
+    transform: none;
+  }
+
+  .authCardHome {
+    transform: none;
+  }
+}

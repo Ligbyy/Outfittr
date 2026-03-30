@@ -1,9 +1,0 @@
-
-
-.registerField:focus-within fieldset {
-    border-color: var(--input-focus-border);
-}
-
-.registerField:focus-within label {
-    color: var(--input-focus-border);
-}

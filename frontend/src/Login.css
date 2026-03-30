@@ -1,0 +1,25 @@
+.authField {
+  position: relative;
+  z-index: 1;
+}
+
+.loginField label,
+.loginField input {
+  color: var(--paper) !important;
+}
+
+.loginField fieldset {
+  border-width: 2px !important;
+  border-color: rgba(255, 246, 221, 0.25) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.loginField:focus-within fieldset {
+  border-color: var(--input-focus-border) !important;
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.18);
+}
+
+.loginField:focus-within label {
+  color: var(--input-focus-border) !important;
+}

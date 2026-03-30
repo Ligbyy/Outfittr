@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Grotesk:wght@400;500;700&display=swap');
+
 html {
   overflow-y: hidden;
 }
@@ -6,7 +8,7 @@ html, height, body, .root {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .headerText {
@@ -18,7 +20,6 @@ html, height, body, .root {
   height: calc(100% - 64px);
 }
 
-/* The material design library makes the header smaller on small screens */
 @media only screen and (max-width: 599px) {
   .mainContainerSmallScreen {
     height: calc(100% - 56px) !important;
